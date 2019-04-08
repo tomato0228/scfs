@@ -1,74 +1,79 @@
 import 'package:flutter/material.dart';
-import 'model/post.dart';
+import 'package:flutter_sfcs/demo/bottom_navigation_bar_demo.dart';
+import 'package:flutter_sfcs/demo/drawer_demo.dart';
+import 'package:flutter_sfcs/demo/listView_demo.dart';
 
 void main() => runApp(App());
 
-class App extends StatelessWidget{
-@override
+class App extends StatelessWidget {
+  @override
   Widget build(BuildContext context) {
     // TODO: implement build
     return MaterialApp(
+      debugShowCheckedModeBanner: false, //取消右上角debug图标
       home: Home(),
       theme: ThemeData(
-        primaryColor: Colors.yellow
+        primaryColor: Colors.yellow,
+        highlightColor: Colors.white,
+        splashColor: Colors.white70,
       ),
     );
   }
 }
 
-class Home extends StatelessWidget{
-  Widget _listItemBuilder(BuildContext context, int index){
-    return Container(
-      color: Colors.white,
-      margin: EdgeInsets.all(8.0),
-      child: Column(
-        children: <Widget>[
-          Image.network(posts[index].imageUrl),
-          SizedBox(height: 16.0,),
-          Text(
-            posts[index].title,
-            style: Theme.of(context).textTheme.title,
-          ),
-          Text(
-            posts[index].author,
-            style: Theme.of(context).textTheme.subhead,
-          ),
-          SizedBox(height: 16.0,),
-        ],
-      ),
-    );
-  }
-  
+class Home extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     // TODO: implement build
-    return Scaffold(
-      backgroundColor: Colors.grey[100],
-      appBar: AppBar(
-        title: Text('家校沟通系统'),
-        elevation: 0.0, //阴影
-      ),
-      body: ListView.builder(
-        itemCount: posts.length,
-        itemBuilder: _listItemBuilder,
-      ),
-    );
-  }
-}
-
-class Hello extends StatelessWidget{
-  @override
-  Widget build(BuildContext context) {
-    // TODO: implement build
-    return Center(
-      child: Text(
-        'Hello World!',
-        textDirection: TextDirection.ltr,
-        style: TextStyle(
-          fontSize: 40.0,
-          fontWeight: FontWeight.bold,
-          color: Colors.black87,
+    return DefaultTabController(
+      length: 3,
+      child: Scaffold(
+        backgroundColor: Colors.grey[100],
+        appBar: AppBar(
+          title: Text('家校沟通系统'),
+          actions: <Widget>[
+            IconButton(
+                icon: Icon(Icons.search),
+                tooltip: '搜索',
+                onPressed: () => debugPrint('搜索按钮')),
+          ],
+          elevation: 0.0,
+          //阴影
+          bottom: TabBar(
+            unselectedLabelColor: Colors.black38,
+            indicatorColor: Colors.black54,
+            indicatorSize: TabBarIndicatorSize.label,
+            indicatorWeight: 1.0,
+            tabs: <Widget>[
+              Tab(
+                icon: Icon(Icons.local_florist),
+              ),
+              Tab(
+                icon: Icon(Icons.change_history),
+              ),
+              Tab(
+                icon: Icon(Icons.directions_bike),
+              ),
+            ],
+          ),
         ),
+        body: TabBarView(
+          children: <Widget>[
+            ListViewDemo(),
+            Icon(
+              Icons.change_history,
+              size: 128.0,
+              color: Colors.black12,
+            ),
+            Icon(
+              Icons.directions_bike,
+              size: 128.0,
+              color: Colors.black12,
+            ),
+          ],
+        ),
+        drawer: DrawerDemo(),
+        bottomNavigationBar: BottomNavigationBarDemo(),
       ),
     );
   }
