@@ -46,7 +46,7 @@ class Home extends StatelessWidget{
       backgroundColor: Colors.grey[100],
       appBar: AppBar(
         title: Text('家校沟通系统'),
-        elevation: 0.0,// 阴影
+        elevation: 0.0, //阴影
       ),
       body: ListView.builder(
         itemCount: posts.length,
