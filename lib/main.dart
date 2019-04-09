@@ -4,6 +4,7 @@ import 'package:flutter_sfcs/demo/bottom_navigation_bar_demo.dart';
 import 'package:flutter_sfcs/demo/drawer_demo.dart';
 import 'package:flutter_sfcs/demo/listView_demo.dart';
 import 'package:flutter_sfcs/demo/layout_demo.dart';
+import 'package:flutter_sfcs/demo/view_demo.dart';
 
 void main() => runApp(App());
 
@@ -27,7 +28,7 @@ class Home extends StatelessWidget {
   Widget build(BuildContext context) {
     // TODO: implement build
     return DefaultTabController(
-      length: 3,
+      length: 4,
       child: Scaffold(
         backgroundColor: Colors.grey[100],
         appBar: AppBar(
@@ -55,6 +56,9 @@ class Home extends StatelessWidget {
               Tab(
                 icon: Icon(Icons.directions_bike),
               ),
+              Tab(
+                icon: Icon(Icons.view_quilt),
+              ),
             ],
           ),
         ),
@@ -65,6 +69,7 @@ class Home extends StatelessWidget {
             BasicDemo(),
             //Icon(Icons.directions_bike, size: 128.0, color: Colors.black12,),
             LayoutDemo(),
+            ViewDemo(),
           ],
         ),
         drawer: DrawerDemo(),
