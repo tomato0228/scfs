@@ -7,6 +7,7 @@ import 'package:flutter_sfcs/demo/layout_demo.dart';
 import 'package:flutter_sfcs/demo/view_demo.dart';
 import 'package:flutter_sfcs/demo/sliver_demo.dart';
 import 'package:flutter_sfcs/demo/navigator_demo.dart';
+import 'package:flutter_sfcs/demo/form_demo.dart';
 
 void main() => runApp(App());
 
@@ -23,11 +24,13 @@ class App extends StatelessWidget {
         'navigator': (context) => NavigatorDemo(),
         '/about': (context) => Page(title: 'About'),
         '/basic': (context) => BasicDemo(),
+        '/form': (context) => FormDemo(),
       },
       theme: ThemeData(
         primaryColor: Colors.yellow,
         highlightColor: Colors.white,
         splashColor: Colors.white70,
+        accentColor: Colors.orange,
       ),
     );
   }

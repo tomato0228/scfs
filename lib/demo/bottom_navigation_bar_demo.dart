@@ -14,6 +14,9 @@ class _BottomNavigationBarDemoState extends State<BottomNavigationBarDemo>{
   void _onTapHandler (int index) {
     setState(() {
       _currentIndex = index;
+      if (index == 3) {
+        Navigator.pushNamed(context, '/form');
+      }
     });
   }
 
