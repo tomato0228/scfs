@@ -6,6 +6,7 @@ import 'package:flutter_sfcs/demo/listView_demo.dart';
 import 'package:flutter_sfcs/demo/layout_demo.dart';
 import 'package:flutter_sfcs/demo/view_demo.dart';
 import 'package:flutter_sfcs/demo/sliver_demo.dart';
+import 'package:flutter_sfcs/demo/navigator_demo.dart';
 
 void main() => runApp(App());
 
@@ -15,7 +16,14 @@ class App extends StatelessWidget {
     // TODO: implement build
     return MaterialApp(
       debugShowCheckedModeBanner: false, //取消右上角debug图标
-      home: Home(),
+//      home: NavigatorDemo(),
+      initialRoute: '/',
+      routes: {
+        '/': (context) => Home(),
+        'navigator': (context) => NavigatorDemo(),
+        '/about': (context) => Page(title: 'About'),
+        '/basic': (context) => BasicDemo(),
+      },
       theme: ThemeData(
         primaryColor: Colors.yellow,
         highlightColor: Colors.white,
