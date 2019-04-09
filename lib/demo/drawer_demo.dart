@@ -15,7 +15,7 @@ class DrawerDemo extends StatelessWidget{
             ),
             decoration: BoxDecoration(
               image: DecorationImage(
-                image: NetworkImage('http://thumbs.dreamstime.com/b/圣诞节背景-年-105999924.jpg'),
+                image: NetworkImage('http://gss0.baidu.com/9fo3dSag_xI4khGko9WTAnF6hhy/zhidao/pic/item/6c224f4a20a44623d34fcf2b9a22720e0df3d7f6.jpg'),
                 fit: BoxFit.cover,
                 colorFilter: ColorFilter.mode(
                     Colors.grey[400].withOpacity(0.6),
