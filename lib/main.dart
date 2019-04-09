@@ -5,6 +5,7 @@ import 'package:flutter_sfcs/demo/drawer_demo.dart';
 import 'package:flutter_sfcs/demo/listView_demo.dart';
 import 'package:flutter_sfcs/demo/layout_demo.dart';
 import 'package:flutter_sfcs/demo/view_demo.dart';
+import 'package:flutter_sfcs/demo/sliver_demo.dart';
 
 void main() => runApp(App());
 
@@ -23,6 +24,7 @@ class App extends StatelessWidget {
     );
   }
 }
+
 class Home extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -47,27 +49,19 @@ class Home extends StatelessWidget {
             indicatorSize: TabBarIndicatorSize.label,
             indicatorWeight: 1.0,
             tabs: <Widget>[
-              Tab(
-                icon: Icon(Icons.local_florist),
-              ),
-              Tab(
-                icon: Icon(Icons.change_history),
-              ),
-              Tab(
-                icon: Icon(Icons.directions_bike),
-              ),
-              Tab(
-                icon: Icon(Icons.view_quilt),
-              ),
+              Tab(icon: Icon(Icons.local_florist)),
+              Tab(icon: Icon(Icons.change_history)),
+              Tab(icon: Icon(Icons.directions_bike)),
+              Tab(icon: Icon(Icons.view_quilt)),
             ],
           ),
         ),
         body: TabBarView(
           children: <Widget>[
             ListViewDemo(),
-            //Icon(Icons.change_history,size: 128.0,color: Colors.black12,),
-            BasicDemo(),
-            //Icon(Icons.directions_bike, size: 128.0, color: Colors.black12,),
+            //Icon(Icons.change_history,size: 128.0,color: Colors.black12),
+            SliverDemo(),
+            //Icon(Icons.directions_bike, size: 128.0, color: Colors.black12),
             LayoutDemo(),
             ViewDemo(),
           ],
