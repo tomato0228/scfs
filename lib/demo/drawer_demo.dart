@@ -36,7 +36,11 @@ class DrawerDemo extends StatelessWidget {
           ListTile(
             title: Text('Favorite', textAlign: TextAlign.right),
             trailing: Icon(Icons.favorite, color: Colors.black12, size: 22.0),
-            onTap: () => Navigator.pop(context),
+//            onTap: () => Navigator.pop(context),
+            onTap: () {
+              Navigator.pop(context);
+              Navigator.pushNamed(context, '/mdc');
+            },
           ),
           ListTile(
             title: Text('Settings', textAlign: TextAlign.right),

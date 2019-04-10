@@ -4,6 +4,7 @@ import 'package:flutter_sfcs/demo/bottom_navigation_bar_demo.dart';
 import 'package:flutter_sfcs/demo/drawer_demo.dart';
 import 'package:flutter_sfcs/demo/listView_demo.dart';
 import 'package:flutter_sfcs/demo/layout_demo.dart';
+import 'package:flutter_sfcs/demo/state/state_management_demo.dart';
 import 'package:flutter_sfcs/demo/view_demo.dart';
 import 'package:flutter_sfcs/demo/sliver_demo.dart';
 import 'package:flutter_sfcs/demo/navigator_demo.dart';
@@ -20,7 +21,7 @@ class App extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false, //取消右上角debug图标
 //      home: NavigatorDemo(),
-      initialRoute: '/mdc',
+      initialRoute: '/',
       routes: {
         '/': (context) => Home(),
         'navigator': (context) => NavigatorDemo(),
@@ -28,6 +29,7 @@ class App extends StatelessWidget {
         '/basic': (context) => BasicDemo(),
         '/form': (context) => FormDemo(),
         '/mdc': (context) => MaterialComponents(),
+        '/state-management': (context) => StateManagementDemo(),
       },
       theme: ThemeData(
         primaryColor: Colors.yellow,

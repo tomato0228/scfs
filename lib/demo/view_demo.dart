@@ -10,7 +10,7 @@ class ViewDemo extends StatelessWidget {
 }
 
 class GridViewBuilderDemo extends StatelessWidget {
-  Widget _gridItemBuilder(BuildContext contex, int index) {
+  Widget _gridItemBuilder(BuildContext context, int index) {
     return Container(
       child: Image.network(
         posts[index].imageUrl,
