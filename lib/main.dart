@@ -8,6 +8,8 @@ import 'package:flutter_sfcs/demo/view_demo.dart';
 import 'package:flutter_sfcs/demo/sliver_demo.dart';
 import 'package:flutter_sfcs/demo/navigator_demo.dart';
 import 'package:flutter_sfcs/demo/form_demo.dart';
+import 'package:flutter_sfcs/demo/material_components.dart';
+
 
 void main() => runApp(App());
 
@@ -18,13 +20,14 @@ class App extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false, //取消右上角debug图标
 //      home: NavigatorDemo(),
-      initialRoute: '/',
+      initialRoute: '/mdc',
       routes: {
         '/': (context) => Home(),
         'navigator': (context) => NavigatorDemo(),
         '/about': (context) => Page(title: 'About'),
         '/basic': (context) => BasicDemo(),
         '/form': (context) => FormDemo(),
+        '/mdc': (context) => MaterialComponents(),
       },
       theme: ThemeData(
         primaryColor: Colors.yellow,
