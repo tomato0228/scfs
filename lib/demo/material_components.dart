@@ -3,6 +3,11 @@ import 'package:flutter_sfcs/demo/button_demo.dart';
 import 'package:flutter_sfcs/demo/floating_action_button_demo.dart';
 import 'package:flutter_sfcs/demo/popup_menu_button_demo.dart';
 import 'package:flutter_sfcs/demo/form_demo.dart';
+import 'package:flutter_sfcs/demo/checkbox_demo.dart';
+import 'package:flutter_sfcs/demo/radio_demo.dart';
+import 'package:flutter_sfcs/demo/switch_demo.dart';
+import 'package:flutter_sfcs/demo/slider_demo.dart';
+import 'package:flutter_sfcs/demo/datetime_demo.dart';
 
 class MaterialComponents extends StatelessWidget {
   @override
@@ -14,6 +19,26 @@ class MaterialComponents extends StatelessWidget {
       ),
       body: ListView(
         children: <Widget>[
+          ListItem(
+            title: 'Datetime',
+            page: DateTimeDemo(),
+          ),
+          ListItem(
+            title: 'Slider',
+            page: SliderDemo(),
+          ),
+          ListItem(
+            title: 'Switch',
+            page: SwitchDemo(),
+          ),
+          ListItem(
+            title: 'Radio',
+            page: RadioDemo(),
+          ),
+          ListItem(
+            title: 'CheckBox',
+            page: CheckboxDemo(),
+          ),
           ListItem(
             title: 'Form',
             page: FormDemo(),
