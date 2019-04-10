@@ -8,6 +8,11 @@ import 'package:flutter_sfcs/demo/radio_demo.dart';
 import 'package:flutter_sfcs/demo/switch_demo.dart';
 import 'package:flutter_sfcs/demo/slider_demo.dart';
 import 'package:flutter_sfcs/demo/datetime_demo.dart';
+import 'package:flutter_sfcs/demo/simple_dialog_demo.dart';
+import 'package:flutter_sfcs/demo/alert_dialog_demo.dart';
+import 'package:flutter_sfcs/demo/bottom_sheet_demo.dart';
+import 'package:flutter_sfcs/demo/snack_bar_demo.dart';
+import 'package:flutter_sfcs/demo/expansion_panel_demo.dart';
 
 class MaterialComponents extends StatelessWidget {
   @override
@@ -19,6 +24,26 @@ class MaterialComponents extends StatelessWidget {
       ),
       body: ListView(
         children: <Widget>[
+          ListItem(
+            title: 'ExpansionPanel',
+            page: ExpansionPanelDemo(),
+          ),
+          ListItem(
+            title: 'SnackBar',
+            page: SnackBarDemo(),
+          ),
+          ListItem(
+            title: 'BottomSheet',
+            page: BottomSheetDemo(),
+          ),
+          ListItem(
+            title: 'AlertDialog',
+            page: AlertDialogDemo(),
+          ),
+          ListItem(
+            title: 'SimpleDialog',
+            page: SimpleDialogDemo(),
+          ),
           ListItem(
             title: 'Datetime',
             page: DateTimeDemo(),
@@ -84,7 +109,6 @@ class _WidgetDemo extends StatelessWidget {
     );
   }
 }
-
 
 class ListItem extends StatelessWidget {
   final String title;
