@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_sfcs/demo/animation/animation_demo.dart';
 import 'package:flutter_sfcs/demo/bloc/bloc_demo.dart';
 import 'package:flutter_sfcs/demo/button_demo.dart';
 import 'package:flutter_sfcs/demo/floating_action_button_demo.dart';
@@ -34,6 +35,10 @@ class MaterialComponents extends StatelessWidget {
       ),
       body: ListView(
         children: <Widget>[
+          ListItem(
+            title: 'Animation',
+            page: AnimationDemo(),
+          ),
           ListItem(
             title: 'Http',
             page: HttpDemo(),
