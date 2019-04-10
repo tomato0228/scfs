@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_sfcs/demo/bloc/bloc_demo.dart';
 import 'package:flutter_sfcs/demo/button_demo.dart';
 import 'package:flutter_sfcs/demo/floating_action_button_demo.dart';
+import 'package:flutter_sfcs/demo/http/http_demo.dart';
 import 'package:flutter_sfcs/demo/popup_menu_button_demo.dart';
 import 'package:flutter_sfcs/demo/form_demo.dart';
 import 'package:flutter_sfcs/demo/checkbox_demo.dart';
@@ -33,6 +34,10 @@ class MaterialComponents extends StatelessWidget {
       ),
       body: ListView(
         children: <Widget>[
+          ListItem(
+            title: 'Http',
+            page: HttpDemo(),
+          ),
           ListItem(
             title: 'Bloc',
             page: BlocDemo(),
